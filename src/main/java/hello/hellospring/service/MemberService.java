@@ -19,7 +19,7 @@ public class MemberService {
      * 기존에 객체를 그대로 생성했을 때,
      * MemberService 파일의 객체 생성방식과 Test의 생성방식은
      * 아예 서로 다른 객체를 생성하기 때문에, 같은 객체를 사용하기 위함
-     * ( 오류가 안 나는건 MemoryMemberRepository의 Map이 static이라 그렇다. )
+     * ( 오류가 안 나는건 MemoryMemberRepository의 Store가 static이라 그렇다. )
      * MemberService 입장에서 MemberRepository를 외부에서 넣어주는데
      * 이 것을 DI(Dependency Injection) = 의존관계 주입이라고 한다.
      **/

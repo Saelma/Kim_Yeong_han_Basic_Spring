@@ -16,6 +16,10 @@ public class MemoryMemberRepository implements MemberRepository{
         return member;
     }
 
+    /**
+     *
+     * Optional은 일 수도 있고, 아닐 수도 있는 즉, Null값이 잇는 것을 작성하기 위할 때
+     */
     @Override
     public Optional<Member> findById(Long id) {
         return Optional.ofNullable(store.get(id));
@@ -31,8 +35,18 @@ public class MemoryMemberRepository implements MemberRepository{
         return new ArrayList<>(store.values());
     }
 
+    /**
+     * clearStore은 테스트를 작성 시 , 한 테스트가 다른 테스트에게 영향이 끼쳐지기 때문에
+     * 테스트를 한 후, 값을 초기화하기 위함임.
+     */
     public void clearStore(){
         store.clear();
     }
 }
 
+/**
+ * Id값은 ++Sequence에 의해 자동으로 올라감.
+ * Map은 리스트나 배열같은 순차적이 아닌, key를 통해 value를 얻는 형식임
+ * ex( map.put("people", "사람");
+ *     map.put("baseball", "야구");
+ */
