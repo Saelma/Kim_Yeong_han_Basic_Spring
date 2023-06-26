@@ -37,6 +37,7 @@ public class MemberService {
 
         validateDuplicateMember(member); // 중복 회원 검증
 
+
         /**
          *         memberRepository.findByName(member.getName())
          *                 .ifPresent(m-> {
