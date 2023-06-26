@@ -18,12 +18,8 @@ import static org.junit.jupiter.api.Assertions.assertThrows;
 @SpringBootTest // 스프링 컨테이너와 테스트 함께 실행
 @Transactional // 테스트 케이스에 달면 테스트를 실행할 때 트랜잭션을 실행하고 테스트가 끝나면 DB를 롤백시켜줌.
 class MemberServiceIntegrationTest {
-    @Autowired
-    MemberService memberService;
-    @Autowired
-    MemberRepository memberRepository;
-
-
+    @Autowired MemberService memberService;
+    @Autowired MemberRepository memberRepository;
 
     @Test
     void 회원가입() {
